@@ -1,1 +1,419 @@
-# my-portfolio-ruhulaminbd.com
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RA Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <canvas id="particles"></canvas>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#home" class="logo">
+            <img
+                src="{{ url_for('static', filename='images/logo.png') }}"
+                alt="Logo"
+            >
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <button id="themeToggle">🌙</button>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Hello, I'm <span class="typing"></span></h1>
+        <p>
+            Python Learner & Future Full Stack Developer
+        </p>
+        <a href="#projects" class="btn">
+            View My Work
+        </a>
+    </div>
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='images/profile.png') }}" alt="Ruhul Amin">
+    </div>
+
+</section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+
+        <div class="about-container">
+
+            <!-- Left Side -->
+            <div class="about-text">
+                <h2>About Me</h2>
+
+                <p>
+                    I am a passionate Full Stack Developer focused on building
+                    scalable, fast and modern web applications using Python (Flask)
+                    and frontend technologies.
+                </p>
+
+                <p>
+                    I love solving real-world problems and turning ideas into
+                    functional digital products.
+                </p>
+
+                <!-- Stats -->
+                <div class="stats">
+
+                    <div class="stat-box">
+                        <h3>10+</h3>
+                        <p>Projects</p>
+                    </div>
+
+                    <div class="stat-box">
+                        <h3>1+</h3>
+                        <p>Years Learning</p>
+                    </div>
+
+                    <div class="stat-box">
+                        <h3>100%</h3>
+                        <p>Dedication</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Right Side -->
+            <div class="about-skills">
+
+                <h3>Skills Overview</h3>
+
+                <div class="skill">
+                    <span>Python / Flask</span>
+                    <div class="bar"><div class="fill" style="width:90%"></div></div>
+                </div>
+
+                <div class="skill">
+                    <span>HTML / CSS</span>
+                    <div class="bar"><div class="fill" style="width:95%"></div></div>
+                </div>
+
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="bar"><div class="fill" style="width:80%"></div></div>
+                </div>
+
+                <div class="skill">
+                    <span>API Development</span>
+                    <div class="bar"><div class="fill" style="width:75%"></div></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2>My Skills</h2>
+
+        <div class="skills-container">
+            <div class="skill-card">
+                <h3>Python</h3>
+                <p>Backend development using Flask.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>HTML</h3>
+                <p>Building website structure and content.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>CSS</h3>
+                <p>Designing modern and responsive layouts.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Flask</h3>
+                <p>Creating dynamic websites with Python.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="section-title">
+            <p>MY WORK</p>
+            <h2>Featured Projects</h2>
+        </div>
+        <div class="card-container">
+
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/project1.jpg') }}" alt="Project 1">
+            <div class="card-content">
+                <h3>Portfolio Website</h3>
+                <p>
+                    Responsive Flask Portfolio with Animations
+                </p>
+                <div class="project-buttons">
+                    <a href="/project/portfolio" class="project-btn">
+                        Live Demo
+                    </a>
+                    <a href="#" class="project-btn github">
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/project2.jpg') }}" alt="Project 2">
+            <div class="card-content">
+                <h3>Todo App</h3>
+                <p>
+                    Task Management App with Flask
+                </p>
+                <div class="project-buttons">
+                    <a href="/project/todo" class="project-btn">
+                        Live Demo
+                    </a>
+                    <a href="#" class="project-btn github">
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- What I Can Do Section -->
+    <section class="services" id="services">
+
+        <h2 class="services-title">What I Can Do</h2>
+        <p class="services-subtitle">My Core Skills and Expertise</p>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <i class="fa-solid fa-code"></i>
+                <h3>Web Development</h3>
+                <p>Modern and clean Websites with latest Technologies.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fa-solid fa-server"></i>
+                <h3>Backend (Flask / Django)</h3>
+                <p>Powerful Backend systems using Python Frameworks.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fa-solid fa-plug"></i>
+                <h3>API Development</h3>
+                <p>RESTful APIs for Apps and Integrations.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fa-solid fa-desktop"></i>
+                <h3>Frontend (HTML, CSS, JS)</h3>
+                <p>Responsive and iInteractive UI Development.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <h3>Responsive Design</h3>
+                <p>Works perfectly on All Devices and Screens.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fa-solid fa-database"></i>
+                <h3>Database Work</h3>
+                <p>MySQL, SQLite and PostgreSQL handling.</p>
+            </div>
+
+            <!-- Local SEO Expert -->
+            <div class="service-card">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                <h3>Local SEO Expert</h3>
+                <p>Improve Website Ranking on Google and Bboost Local Business visibility.</p>
+            </div>
+
+            <!-- Digital Marketing -->
+            <div class="service-card">
+                <i class="fa-solid fa-bullhorn"></i>
+                <h3>Digital Marketing</h3>
+                <p>Social Media Marketing, Ads Management, and Online Growth Strategies.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+    <h2>Contact Me</h2>
+
+    <form class="contact-form" method="POST" action="/contact">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Ruhul Amin Portfolio</p>
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+    const texts = ["Ruhul Amin", "Full Stack Developer in progress", "Python Learner"];
+    let textIndex = 0;
+    let charIndex = 0;
+
+    const typingEl = document.querySelector(".typing");
+
+    function typeEffect() {
+        let currentText = texts[textIndex];
+
+        typingEl.textContent = currentText.slice(0, charIndex);
+        charIndex++;
+
+        if (charIndex <= currentText.length) {
+            setTimeout(typeEffect, 120);
+        } else {
+            setTimeout(() => {
+                charIndex = 0;
+                textIndex++;
+
+                if (textIndex >= texts.length) {
+                    textIndex = 0;
+                }
+
+                typeEffect();
+            }, 1500);
+        }
+    }
+
+    typeEffect();
+    });
+</script>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        const top = window.scrollY;
+        const offset = sec.offsetTop - 400;
+
+        if (top > offset) {
+            sec.classList.add("show");
+        }
+    });
+});
+</script>
+
+<script>
+const navLinks = document.querySelectorAll(".nav-links a");
+const sections2 = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections2.forEach(sec => {
+        const sectionTop = sec.offsetTop;
+        if (scrollY >= sectionTop - 200) {
+            current = sec.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+    });
+});
+</script>
+
+<script>
+const toggleBtn = document.getElementById("themeToggle");
+
+toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light");
+
+    if (document.body.classList.contains("light")) {
+        toggleBtn.textContent = "🌞";
+    } else {
+        toggleBtn.textContent = "🌙";
+    }
+});
+</script>
+
+<script>
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particlesArray = [];
+
+class Particle {
+    constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 3;
+        this.speedX = Math.random() * 1 - 0.5;
+        this.speedY = Math.random() * 1 - 0.5;
+    }
+
+    update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+    }
+
+    draw() {
+        ctx.fillStyle = "#38bdf8";
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+    }
+}
+
+function init() {
+    particlesArray = [];
+    for (let i = 0; i < 80; i++) {
+        particlesArray.push(new Particle());
+    }
+}
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    particlesArray.forEach(p => {
+        p.update();
+        p.draw();
+    });
+
+    requestAnimationFrame(animate);
+}
+
+init();
+animate();
+</script>
+
+</body>
+
+</html>
