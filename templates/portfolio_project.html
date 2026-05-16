@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Case Study</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+        body{
+            background:#0f172a;
+            color:white;
+            font-family:Arial;
+        }
+
+        .container{
+            max-width:900px;
+            margin:auto;
+            padding:40px;
+        }
+
+        h1{
+            color:#38bdf8;
+            text-align:center;
+        }
+
+        /* cards */
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+            margin-top:30px;
+        }
+
+        .card{
+            background:#1e293b;
+            padding:20px;
+            border-radius:12px;
+            transition:0.3s;
+            cursor:pointer;
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+            box-shadow:0 10px 20px rgba(56,189,248,0.2);
+        }
+
+        /* progress bar */
+        .bar{
+            background:#334155;
+            height:10px;
+            border-radius:10px;
+            overflow:hidden;
+            margin:8px 0;
+        }
+
+        .fill{
+            height:100%;
+            background:#38bdf8;
+        }
+
+        /* modal */
+        .modal{
+            display:none;
+            position:fixed;
+            top:0;left:0;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,0.8);
+            justify-content:center;
+            align-items:center;
+        }
+
+        .modal-content{
+            background:#1e293b;
+            padding:30px;
+            border-radius:12px;
+            width:80%;
+            max-width:500px;
+        }
+
+        .close{
+            float:right;
+            cursor:pointer;
+            color:red;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Portfolio Case Study</h1>
+
+<div class="grid">
+
+    <div class="card" onclick="openModal('Portfolio Project')">
+        <h3>Portfolio Website</h3>
+        <p>Modern developer portfolio</p>
+
+        <p>Tech Stack</p>
+        <div class="bar"><div class="fill" style="width:90%"></div></div>
+
+        <p>Flask</p>
+        <div class="bar"><div class="fill" style="width:80%"></div></div>
+    </div>
+
+    <div class="card" onclick="openModal('Todo App')">
+        <h3>Todo App</h3>
+        <p>Task management system</p>
+
+        <p>JavaScript</p>
+        <div class="bar"><div class="fill" style="width:85%"></div></div>
+    </div>
+
+</div>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">X</span>
+        <h2 id="modal-title"></h2>
+        <p>This is detailed project view.</p>
+    </div>
+</div>
+
+<script>
+function openModal(title){
+    document.getElementById("modal").style.display="flex";
+    document.getElementById("modal-title").innerText=title;
+}
+
+function closeModal(){
+    document.getElementById("modal").style.display="none";
+}
+</script>
+
+</body>
+</html>
